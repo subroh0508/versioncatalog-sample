@@ -14,4 +14,8 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "VersionCatelog Sample"
-include(":app")
+
+include(
+    ":app",
+    ":desktop",
+)
