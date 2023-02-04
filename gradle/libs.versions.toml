@@ -10,7 +10,7 @@ androidx-activity = "1.3.1"
 junit = "4.13.2"
 
 androidx-test-junit = "1.1.5"
-androidx-test-espresso = "3.5.0"
+androidx-test-espresso = "3.5.1"
 
 [plugins]
 kotlin-mpp = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
