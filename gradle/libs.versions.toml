@@ -20,6 +20,12 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 
 [libraries]
+android-gradle-build-tools = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+android-gradle-build-tools-builder = { module = "com.android.tools.build:builder", version.ref = "agp" }
+android-gradle-build-tools-builder-model = { module = "com.android.tools.build:builder-model", version.ref = "agp" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-gradle-plugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
+
 androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
 androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle-runtime" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
@@ -29,3 +35,12 @@ junit = { module = "junit:junit", version.ref = "junit" }
 androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-junit" }
 androidx-test-espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-test-espresso" }
 # compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+
+[bundles]
+plugins = [
+    "android-gradle-build-tools",
+    "android-gradle-build-tools-builder",
+    "android-gradle-build-tools-builder-model",
+    "kotlin-gradle-plugin",
+    "compose-gradle-plugin",
+]
