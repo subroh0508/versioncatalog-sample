@@ -1,4 +1,5 @@
 plugins {
+    alias(libs.plugins.compose)
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
@@ -27,15 +28,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.asProvider().get()
-    }
     packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -47,8 +39,14 @@ dependencies {
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.androidx.activity.compose)
-    implementation(libs.bundles.compose)
+    implementation(compose.ui)
+    implementation(compose.preview)
+    @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+    implementation(compose.material3)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.bundles.android.test)
-    debugImplementation(libs.bundles.debug.compose)
+    androidTestImplementation(libs.androidx.test.junit)
+    androidTestImplementation(libs.androidx.test.espresso)
+    @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+    androidTestImplementation(compose.uiTestJUnit4)
+    debugImplementation(compose.uiTooling)
 }
