@@ -1,8 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id(libs.plugins.kotlin.mpp.get().pluginId) apply false
-    id(libs.plugins.android.application.get().pluginId) apply false
-    id(libs.plugins.android.library.get().pluginId) apply false
-    id(libs.plugins.kotlin.android.get().pluginId) apply false
-    id(libs.plugins.compose.get().pluginId) apply false
+    alias(libs.plugins.kotlin.mpp) apply false
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.compose) apply false
 }

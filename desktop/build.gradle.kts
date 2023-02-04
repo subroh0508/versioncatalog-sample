@@ -1,3 +1,3 @@
 plugins {
-    `compose-desktop`
+    id("compose-desktop")
 }
