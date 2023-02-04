@@ -15,7 +15,7 @@ dependencyResolutionManagement {
 }
 
 include(
-    ":app",
+    ":android",
     ":desktop",
     ":common",
 )
