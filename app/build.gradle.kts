@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":common"))
+
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.androidx.activity.compose)

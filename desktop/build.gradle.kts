@@ -6,6 +6,8 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":common"))
+
     implementation(compose.runtime)
     implementation(compose.foundation)
     @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
